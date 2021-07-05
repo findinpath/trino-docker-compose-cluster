@@ -6,6 +6,7 @@ This project can be used to setup a [Trino](https://trino.io/) cluster with `doc
 The Trino cluster makes use of the [tpch](https://trino.io/docs/current/connector/tpch.html)
 catalog for benchmarking the performance of the cluster computations.
 
+## Cluster setup
 Setting up initially the cluster (composed of a coordinator and a worker) can be done through the command:
 
 ```bash
@@ -44,12 +45,13 @@ node_id    |         http_uri         | node_version | coordinator | state
 ```
 
 
-Benchmarks
+## Benchmarks
 
 Execute any of the queries from the directory [benchmarks](benchmarks) to get a feeling on how
 the cluster is performing.
 
-Teardown
+
+## Tear down
 
 ```bash
 docker-compose down
