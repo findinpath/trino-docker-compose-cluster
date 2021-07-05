@@ -29,7 +29,7 @@ docker-compose up --scale trino-worker=3 -d
 Check the number of nodes in the Trino cluster:
 
 ```bash
-docker exec -it trino_cluster_trino-coordinator_1 /usr/bin/trino
+docker exec -it trino-docker-compose-cluster_trino-coordinator_1 /usr/bin/trino
 ```
 
 ```sql
