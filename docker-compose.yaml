@@ -1,0 +1,24 @@
+version: "3.9"
+   
+services:
+  trino-coordinator:
+    hostname: trino
+    image: 'trinodb/trino:358'
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./trino/coordinator/etc:/usr/lib/trino/etc:ro
+    networks:
+      - trino-network
+
+  trino-worker:
+    hostname: trino
+    image: 'trinodb/trino:358'
+    volumes:
+      - ./trino/worker/etc:/usr/lib/trino/etc:ro
+    networks:
+      - trino-network
+
+networks:
+  trino-network:
+    driver: bridge            
